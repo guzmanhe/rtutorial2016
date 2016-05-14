@@ -1,0 +1,180 @@
+---
+title: "R Basics"
+date: "May 12, 2016"
+author: "Francisco Guzmán"
+output: 
+  pdf_document:
+    highlight: tango
+    number_sections: true
+---
+`r library(knitr);opts_chunk$set(comment=">>>")`
+
+# R Basics
+R is a *programming language*. 
+
+Let's review some of its basic characteristics
+
+  - Basic operations
+  - Common functions
+  - Data types
+
+## Basic operations:  Assignment 
+
+One of the main differences is the operator "<-"
+```{r assigning values to variables}
+#Let's create variables of different types
+#numeric
+my_num1<- 15
+print (my_num1)
+
+#character
+my_string<- "Hello world"
+print (my_string)
+
+#logical
+my_bool<- TRUE
+print (my_bool)
+```
+
+## Basic operations: Aritmetics
+```{r aritmetics}
+# We can do operations with the variables
+my_num1<-15
+my_num2<-5
+#substraction
+my_num1-my_num2
+#addition
+my_num1+my_num2
+#multiplicatoin
+my_num1*my_num2
+#division
+my_num1/my_num2
+# power
+my_num1^2
+#square root
+sqrt(my_num1 *my_num2)
+```
+
+##Data types
+```{r data types}
+# Let's review the internal representation of the variables
+
+# Numeric: default number (float)
+class(my_num1)
+
+#Character: strings are characters
+class(my_string)
+
+#Logicals: booleans
+class(my_bool)
+```
+## Lists
+```{r lists}
+#You can create a list of variables with the **c()** command
+ranks<-c(1,2,3,4)
+print(ranks)
+# Lists preserve the class of its elements
+class(ranks)
+#You can access the specific elements **INDEX 1**
+print(ranks[1] )
+# You can perform element-wise ops in lists
+weights<-c(78.0,66.0,90.0,55.5)
+heights <-c(181.0,160.0,190.0,170.0)
+
+#e.g. division
+ratios<-weights/heights
+
+# You can have lists of characters
+names<-c("John","Mary","Bob","Anna")
+affiliations<-c("QF","QP","QP","QF")
+# Or logicals
+is_fit<-c(TRUE,FALSE,TRUE,FALSE)
+
+```
+##Common functions
+
+```{r str function}
+# **str**: Structure: tells you about the variable(s) class, size and values
+str(my_num1)
+str(my_string)
+str(weights)
+```
+
+## Summary
+```{r summary function }
+# **summary**: Gives you a summary of a variable. 
+# Specially useful for lists/vectors
+
+summary(weights)
+```
+
+## Factors
+Factors are a useful data type in R.
+
+They represent categories, with a numerical correspondence (level), and a string representation (label)
+
+```{r}
+#Let's factorize the affiliation list
+f_affiliations<-factor(affiliations)
+print(f_affiliations)
+#Now let's compare
+str(f_affiliations)
+str(affiliations)
+#Even summaries are different
+summary(f_affiliations)
+summary(affiliations)
+
+```
+
+
+## Data Frames (DF)
+They are collections of variables (columns) with different measurements(rows)
+
+Let's create a list of people!
+```{r}
+my_df <- data.frame(name=names,affiliation=affiliations,weight=weights,height=heights,is_fit=is_fit)
+# The command head shows us a preview of the dataset
+head(my_df)
+# We can see its structure
+str(my_df)
+# Or a complete summary
+summary(my_df)
+```
+
+## Variables in a DF
+
+```{r}
+#print the column name
+my_df$name
+```
+
+```{r}
+my_df$weight
+```
+
+
+## Basic plots
+
+  - Two numerics
+  
+```{r}
+plot(my_df$weight,my_df$height,xlab="Weight",ylab="Height")
+
+```
+  
+  - One numeric, one factor
+
+
+```{r}
+#This is the wrong way because affiliation is taken as a numeric
+plot(my_df$weight,my_df$affiliation,xlab="Weight", ylab="Affiliation")
+```
+```{r}
+# Instead, we use the "by" operator "~". 
+#Note that this operator works as y~x. So now the axes are reversed
+plot(my_df$weight~my_df$affiliation,ylab="Weight",xlab="Affiliation")
+```
+
+
+
+
