@@ -12,7 +12,7 @@ print (my_string)
 my_bool<- TRUE
 print (my_bool)
 
-## ----aritmetics----------------------------------------------------------
+## ----arithmetics---------------------------------------------------------
 # We can do operations with the variables
 my_num1<-15
 my_num2<-5
@@ -41,22 +41,22 @@ class(my_string)
 #Logicals: booleans
 class(my_bool)
 
-## ----lists---------------------------------------------------------------
-#You can create a list of variables with the **c()** command
+## ----vectors-------------------------------------------------------------
+#You can create a list of variables with the combine **c()** command
 ranks<-c(1,2,3,4)
 print(ranks)
-# Lists preserve the class of its elements
+# Vectors preserve the class of its elements
 class(ranks)
 #You can access the specific elements **INDEX 1**
 print(ranks[1] )
-# You can perform element-wise ops in lists
+# You can perform element-wise ops in vectors
 weights<-c(78.0,66.0,90.0,55.5)
 heights <-c(181.0,160.0,190.0,170.0)
 
 #e.g. division
 ratios<-weights/heights
 
-# You can have lists of characters
+# You can have vectors of characters
 names<-c("John","Mary","Bob","Anna")
 affiliations<-c("QF","QP","QP","QF")
 # Or logicals
@@ -76,7 +76,7 @@ str(weights)
 summary(weights)
 
 ## ------------------------------------------------------------------------
-#Let's factorize the affiliation list
+#Let's factorize the affiliation vector
 f_affiliations<-factor(affiliations)
 print(f_affiliations)
 #Now let's compare
@@ -104,14 +104,15 @@ my_df$name
 my_df$weight
 
 ## ------------------------------------------------------------------------
-plot(my_df$weight,my_df$height)
+plot(my_df$weight,my_df$height,xlab="Weight",ylab="Height")
 
 
 ## ------------------------------------------------------------------------
-#This is the wrong way
-plot(my_df$weight,my_df$affiliation)
+#This is the wrong way because affiliation is taken as a numeric
+plot(my_df$weight,my_df$affiliation,xlab="Weight", ylab="Affiliation")
 
 ## ------------------------------------------------------------------------
-#use the "by" operator
-plot(my_df$weight~my_df$affiliation)
+# Instead, we use the "by" operator "~". 
+#Note that this operator works as y~x. So now the axes are reversed
+plot(my_df$weight~my_df$affiliation,ylab="Weight",xlab="Affiliation")
 

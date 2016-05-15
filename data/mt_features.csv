@@ -1,37 +1,1 @@
-dataset	method	features	all	
-AC	BA	all	0.3444	
-NC07	BA	all	0.3515	
-NC08	BA	all	0.3606	
-NSC09	BA	all	0.259	
-NW09	BA	all	0.2553	
-NW10	BA	all	0.282	
-WMT06	BA	all	0.3006	
-WMT07	BA	all	0.2951	
-WMT08	BA	all	0.3008	
-AC	BA	ftg	0.3386	
-NC07	BA	ftg	0.3486	
-NC08	BA	ftg	0.3553	
-NSC09	BA	ftg	0.2588	
-NW09	BA	ftg	0.2536	
-NW10	BA	ftg	0.278	
-WMT06	BA	ftg	0.298	
-WMT07	BA	ftg	0.2927	
-WMT08	BA	ftg	0.2992	
-AC	F	all	0.3528	
-NC07	F	all	0.3553	
-NC08	F	all	0.3636	
-NSC09	F	all	0.2665	
-NW09	F	all	0.2573	
-NW10	F	all	0.2856	
-WMT06	F	all	0.3053	
-WMT07	F	all	0.3028	
-WMT08	F	all	0.3068	
-AC	F	ftg	0.3565	
-NC07	F	ftg	0.3629	
-NC08	F	ftg	0.3708	
-NSC09	F	ftg	0.2678	
-NW09	F	ftg	0.2585	
-NW10	F	ftg	0.2882	
-WMT06	F	ftg	0.307	
-WMT07	F	ftg	0.304	
-WMT08	F	ftg	0.3073
+dataset,method,features,all,,,AC,BA,all,0.3444,,,NC07,BA,all,0.3515,,,NC08,BA,all,0.3606,,,NSC09,BA,all,0.259,,,NW09,BA,all,0.2553,,,NW10,BA,all,0.282,,,WMT06,BA,all,0.3006,,,WMT07,BA,all,0.2951,,,WMT08,BA,all,0.3008,,,AC,BA,ftg,0.3386,,,NC07,BA,ftg,0.3486,,,NC08,BA,ftg,0.3553,,,NSC09,BA,ftg,0.2588,,,NW09,BA,ftg,0.2536,,,NW10,BA,ftg,0.278,,,WMT06,BA,ftg,0.298,,,WMT07,BA,ftg,0.2927,,,WMT08,BA,ftg,0.2992,,,AC,F,all,0.3528,,,NC07,F,all,0.3553,,,NC08,F,all,0.3636,,,NSC09,F,all,0.2665,,,NW09,F,all,0.2573,,,NW10,F,all,0.2856,,,WMT06,F,all,0.3053,,,WMT07,F,all,0.3028,,,WMT08,F,all,0.3068,,,AC,F,ftg,0.3565,,,NC07,F,ftg,0.3629,,,NC08,F,ftg,0.3708,,,NSC09,F,ftg,0.2678,,,NW09,F,ftg,0.2585,,,NW10,F,ftg,0.2882,,,WMT06,F,ftg,0.307,,,WMT07,F,ftg,0.304,,,WMT08,F,ftg,0.3073,,,

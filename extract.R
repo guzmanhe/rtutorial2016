@@ -1,8 +1,15 @@
 
 library(knitr)
+library(rmarkdown)
 setwd("~/Projects/rtutorial")
 purl("Rbasics.Rmd")
 purl("Recipe1.Rmd")
 purl("Recipe2.Rmd")
 purl("Recipe3.Rmd")
 purl("Recipe4.Rmd")
+
+render("Rbasics.Rmd")
+render("Recipe1.Rmd")
+render("Recipe2.Rmd")
+render("Recipe3.Rmd")
+render("Recipe4.Rmd")
